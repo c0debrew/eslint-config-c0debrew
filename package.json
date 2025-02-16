@@ -1,0 +1,56 @@
+{
+  "name": "eslint-config-c0debrew",
+  "version": "1.0.0",
+  "description": "Personal ESLint config.",
+  "type": "module",
+  "module": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "exports": {
+    "default": "./lib/index.js"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:ci": "prettier --check .",
+    "lint": "eslint --fix .",
+    "lint:ci": "eslint .",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c0debrew/eslint-config-c0debrew.git"
+  },
+  "author": "c0debrew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c0debrew/eslint-config-c0debrew/issues"
+  },
+  "homepage": "https://github.com/c0debrew/eslint-config-c0debrew#readme",
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
+    "@eslint/js": "^9.20.0",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-github": "^5.1.8",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1",
+    "typescript-eslint": "^8.24.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "eslint-plugin-eslint-plugin": "^6.4.0",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.2"
+  }
+}

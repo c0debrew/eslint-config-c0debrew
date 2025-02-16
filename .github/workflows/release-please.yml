@@ -1,0 +1,40 @@
+---
+name: release-please
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+      - name: 📤 Checkout repository
+        uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - name: 🔧 Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://registry.npmjs.org"
+        if: ${{ steps.release.outputs.release_created }}
+      - name: 📦 Load cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ hashFiles('package-lock.json') }}
+        if: ${{ steps.release.outputs.release_created }}
+      - name: ⏳ Installing dependencies
+        run: npm ci
+        if: ${{ steps.release.outputs.release_created }}
+      - name: 📤 Publish package
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
