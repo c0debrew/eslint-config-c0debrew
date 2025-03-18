@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/c0debrew/eslint-config-c0debrew/compare/v1.0.1...v1.0.2) (2025-03-18)
+
+
+### Bug Fixes
+
+* tsconfig ([#32](https://github.com/c0debrew/eslint-config-c0debrew/issues/32)) ([3e499d4](https://github.com/c0debrew/eslint-config-c0debrew/commit/3e499d4af543bd1e196a111a869e2f1f49e24c2e))
+
 ## [1.0.1](https://github.com/c0debrew/eslint-config-c0debrew/compare/v1.0.0...v1.0.1) (2025-03-06)
 
 
