@@ -1,0 +1,48 @@
+{
+  "name": "eslint-config-c0debrew",
+  "version": "0.1.0",
+  "type": "module",
+  "module": "lib/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "exports": {
+    "default": "./lib/index.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:ci": "prettier --check .",
+    "lint": "eslint --fix .",
+    "lint:ci": "eslint .",
+    "postinstall": "husky"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint-plugin-github": "^6.0.0",
+    "eslint-plugin-jsdoc": "^50.6.9",
+    "eslint-plugin-n": "^17.17.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.31.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/bun": "latest",
+    "eslint-plugin-eslint-plugin": "^6.4.0",
+    "husky": "^9.1.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
