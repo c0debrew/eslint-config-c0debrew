@@ -1,0 +1,35 @@
+---
+name: JavaScript CI
+on:
+  merge_group:
+  pull_request:
+    types:
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: 📤 Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: 📦 Load cache
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684
+        with:
+          path: ~/.bun
+          key: ${{ hashFiles('bun.lock') }}
+      - name: 🔧 Install bun
+        uses: oven-sh/setup-bun@54cb141c5c91e2fdc396be3155a391f28e1822eb
+      - name: ⏳ Installing dependencies
+        run: bun install --frozen-lockfile
+      - name: 🪞 Checking the formatting
+        run: bun format:ci
+      - name: 🕵🏻 Checking for issues in code
+        run: bun lint:ci
