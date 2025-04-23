@@ -1,0 +1,5 @@
+.github
+.husky
+.prettierignore
+commitlint.config.js
+eslint.config.js
