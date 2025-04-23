@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-c0debrew",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "module": "lib/index.ts",
   "directories": {
