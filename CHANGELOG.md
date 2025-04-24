@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/c0debrew/eslint-config-c0debrew/compare/v1.0.4...v1.1.0) (2025-04-24)
+
+
+### Features
+
+* lint react ([#10](https://github.com/c0debrew/eslint-config-c0debrew/issues/10)) ([064dc94](https://github.com/c0debrew/eslint-config-c0debrew/commit/064dc94d67d11f5b0536af21a948dcc32aac32ad))
+
 ## [1.0.4](https://github.com/c0debrew/eslint-config-c0debrew/compare/v1.0.0...v1.0.4) (2025-04-24)
 
 
