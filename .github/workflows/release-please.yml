@@ -34,5 +34,5 @@ jobs:
       - name: 📤 Publish package
         run: bun publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_TOKEN: ${{secrets.NPM_CONFIG_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
