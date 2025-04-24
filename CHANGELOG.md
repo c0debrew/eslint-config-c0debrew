@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/c0debrew/eslint-config-c0debrew/compare/v1.0.0...v1.0.4) (2025-04-24)
+
+
+### Miscellaneous Chores
+
+* release 1.0.4 ([d18ff19](https://github.com/c0debrew/eslint-config-c0debrew/commit/d18ff19053a23f62ee5a9860dec83b8b17f00582))
+
 ## 1.0.0 (2025-04-22)
 
 
